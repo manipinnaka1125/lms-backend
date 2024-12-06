@@ -35,7 +35,7 @@ public class AssignCourseController {
         return assignCourseRepository.findByStudentId(studentId); // Fetch by student ID
     }
 
-    // Edit an assigned course (Update an existing course)
+    // Edit an assigned course 
     
 
     // Delete an assigned course
