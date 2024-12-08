@@ -22,7 +22,7 @@ public class AssignCourseController {
         System.out.println("Received payload: " + assignCourse); // Debugging
         return assignCourseRepository.save(assignCourse);
     }
-
+    
     // Get all assigned courses
     @GetMapping("/assigned-courses")
     public List<AssignCourse> getAssignedCourses() {
