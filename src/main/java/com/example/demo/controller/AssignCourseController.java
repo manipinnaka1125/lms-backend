@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:3000")  // Adjust as per your frontend's URL
+@CrossOrigin  // Adjust as per your frontend's URL
 public class AssignCourseController {
 
     @Autowired
