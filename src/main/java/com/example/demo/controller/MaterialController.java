@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/materials")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class MaterialController {
 
     @Autowired
