@@ -38,5 +38,10 @@ public class AdminDashboardController {
         long count = courseRepository.count(); // counts the number of courses
         return count;
     }
+ @GetMapping("/")
+    public String checkApis() {
+        return "All APIs are working correctly!";
+    }
+
 
 }
