@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: lms-backend
-        image: yourdockerhubusername/lms-backend
+        image: manipinnaka1125/lms-backend
         ports:
         - containerPort: 8080
 ---
