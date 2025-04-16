@@ -11,8 +11,8 @@
       shell: |
         cd /home/ubuntu/lms-backend
         ./mvnw package -DskipTests
-        docker build -t yourdockerhubusername/lms-backend .
-        docker push yourdockerhubusername/lms-backend
+        docker build -t manipinnaka1125/lms-backend .
+        docker push manipinnaka1125/lms-backend
 
     - name: Deploy to Kubernetes
       shell: kubectl apply -f /home/ubuntu/lms-backend/k8s/backend-deployment.yaml
