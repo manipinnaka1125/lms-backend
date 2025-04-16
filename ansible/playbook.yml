@@ -1,0 +1,18 @@
+- name: Deploy Backend
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Build and push Docker image
+      shell: |
+        cd /home/ubuntu/lms-backend
+        ./mvnw package -DskipTests
+        docker build -t yourdockerhubusername/lms-backend .
+        docker push yourdockerhubusername/lms-backend
+
+    - name: Deploy to Kubernetes
+      shell: kubectl apply -f /home/ubuntu/lms-backend/k8s/backend-deployment.yaml
